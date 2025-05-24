@@ -1,0 +1,11 @@
+apiVersion: v2
+name: custom-redis
+description: A custom Helm chart for Redis
+type: application
+version: 0.1.0
+appVersion: "7.0.0"  # Redis version
+
+dependencies:
+  - name: redis
+    version: 19.5.4      # Match the Bitnami Redis chart version
+    repository: https://charts.bitnami.com/bitnami
