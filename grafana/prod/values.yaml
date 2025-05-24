@@ -1,0 +1,9 @@
+radminUser: admin
+adminPassword: password
+
+service:
+  type: NodePort
+  nodePort: 32000
+
+ingress:
+  enabled: false

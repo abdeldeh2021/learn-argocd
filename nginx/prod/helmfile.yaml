@@ -1,7 +1,0 @@
-releases:
-  - name: nginx
-    namespace: default
-    chart: bitnami/nginx
-    version: 15.3.2  # Optional: pin version
-    values:
-      - ./chart/values.yaml
