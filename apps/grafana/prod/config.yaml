@@ -1,20 +1,12 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata: 
-  name: grafana
-  namespace: argocd
-spec: 
-  destination: 
-    namespace: grafana
-    server: "https://kubernetes.default.svc"
-  project: monitoring-project
-  source: 
-    repoURL: "https://github.com/abdeldeh2021/learn-argocd.git"
-    targetRevision: main
-    path: apps/grafana/prod/chart
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
+app:
+  name: grafana 
+  cluster: in-cluster
+  namespace: monitoring
+  clusterAlias: test
+  project: monitoring
+  parentValues: /apps/grafana/prod/chart/values.yaml
+  
+
 
 
       
