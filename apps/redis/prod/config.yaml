@@ -1,20 +1,10 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata: 
-  name: redis-grafana
-  namespace: argocd
-spec: 
-  destination: 
-    namespace: grafana
-    server: "https://kubernetes.default.svc"
-  project: monitoring-project
-  source: 
-    repoURL: "https://github.com/abdeldeh2021/learn-argocd.git"
-    targetRevision: main
-    path: apps/redis/prod/chart
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
+app:
+  name: redis 
+  cluster: in-cluster
+  namespace: monitoring
+  clusterAlias: test
+  project:  monitoring-project
+  parentValues: /apps/redis/prod/chart/values.yaml
 
 
       

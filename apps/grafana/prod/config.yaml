@@ -3,7 +3,7 @@ app:
   cluster: in-cluster
   namespace: monitoring
   clusterAlias: test
-  project: monitoring
+  project:  monitoring-project
   parentValues: /apps/grafana/prod/chart/values.yaml
   
 
